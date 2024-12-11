@@ -1,25 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Teko:wght@300..700&family=Workbench:SCAN@-44&display=swap');
 
 body {
-   background : #2E9ce6;
-   padding: 3em;
-   font-family: 'Raleway', 'Arial';
-   color: #fff;
+   background : #ececec;
+   font-family: 'Inconsolata';
+   margin: 0; 
 }
 
-ul {
-   list-style-type: none;
-   margin: 0 0 2em 0;
-   padding: 0;
-}
-
-ul li {
-   display: inline;
-   margin-right: 30px;
-}
-
-a {
-   color: #0f0;
-   text-decoration: none;
+option:hover {
+   background-color: rgba(0, 0, 0, 0.1); 
 }
