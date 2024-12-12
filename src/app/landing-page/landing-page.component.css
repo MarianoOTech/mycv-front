@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Heebo:wght@100..900&family=League+Gothic&family=Vazirmatn:wght@100..900&display=swap');
 
 body{
-    font-family: 'Inconsolata';
+   font-family: 'Inconsolata';
+   background : #ececec;
 }
 .contenido{
    position: relative;
@@ -9,6 +10,7 @@ body{
    display: flex;
    justify-content: space-between;
    padding-left: 90px;
+   top: 70px;
 }
 
 .contenido h2{
@@ -32,8 +34,7 @@ body{
 }
 
 .contenido a{
-
-   font-size: 20px;
+   font-size: 18px;
    text-decoration: none;
    color: #ececec;
    background: #0e0e0e;
@@ -44,12 +45,12 @@ body{
 }
 
 .contenido .imagenBox{
-   width: 600px;
+   width: 550px;
    display: flex;
    justify-content: flex-end;
-   padding-right: 10px;
+   padding-right: 30px;
    
 }
 .contenido .imagenBox img{
-   width: 580px;
+   width: 550px;
 }
