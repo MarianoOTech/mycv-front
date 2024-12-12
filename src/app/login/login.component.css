@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Heebo:wght@100..900&family=League+Gothic&family=Vazirmatn:wght@100..900&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    min-height: 85vh;
+    font-family: 'Inconsolata';
+    color: #ececec;
+}
+
+.VentanaLogin{
+    width: 380px;
+    color:#0e0e0e;
+    border: solid;
+    border-right: solid 5px;
+    border-bottom: solid 8px;
+    border-radius: 30px;
+}
+
+.VentanaLogin h1{
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 220px;
+    padding-left: 15px;
+    background:#29c5c5;
+    color: #0e0e0e;
+}
+
+.VentanaLogin .input-box{
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.input-box input{
+    width: 88%;
+    height: 75%;
+    margin: 5px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: solid;
+    border-color:#0e0e0e;
+    font-size: 16px;
+    padding: 6px 0 0 6px;
+    color: #0e0e0e;
+    font-family: 'Inconsolata';
+}
+.input-box input::placeholder{
+    color: #0e0e0e;
+}
+
+.contra{
+    margin-bottom: 60px;
+}
+.olvidastecontraseña{
+    padding-left: 20px;
+    text-decoration: none;
+    color: #0e0e0e;
+    padding-top: -30px;
+}
+.olvidastecontraseña:hover{
+    text-decoration: underline;
+}
+
+button{
+    margin-left: 260px;
+    font-size: 16px;
+    text-decoration: none;
+    color:#0e0e0e;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid;
+    border-radius: 20px;
+}
+
+button:hover{
+    border: solid;
+    border-radius: 30px;
+    color: #ececec;
+    background: #0e0e0e;
+    border-color:  #0e0e0e;
+}
+
+.registrarte-link{
+    text-align: center;
+}
+
+.registrarte-link a{
+    color: #299494;
+    text-decoration: none;
+    padding: 10px;
+}
+.registrarte-link a:hover{
+    color: #299494;
+    text-decoration: underline;
+}

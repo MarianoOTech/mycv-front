@@ -1,39 +1,26 @@
-<table border=1>
-<tr> 
-  <td> login CRM-uv  </td> <td> 
-  <a routerLink="/">
-     cancel 
-  </a>
-  </td>
-</tr>
-<tr> 
-  <td> Username </td> <td> <input type="email" [(ngModel)]="username" > {{username}} </td>
-</tr>
-<tr> 
-<td> Password </td> <td> <input type="password" [(ngModel)]="password"> {{password }} </td>
-</tr>
-<tr> 
- <td></td> <td>
-
-  <a routerLink="/forgot-password">
-     Forgot Password ? 
-  </a>
-
-</td> 
-</tr>
-<tr> 
-<td> </td> <td>
-         <button (click)="callLogin()"> log in </button>
-         {{ myCredential.username }}
- </td>
-</tr>
-<tr> 
- <td></td> <td> new?
-
-  <a routerLink="/newuser">
-    create account
-  </a>
- </td> 
-</tr>
-</table>
-
+<body>
+  <div class="login-container">
+    <div class="VentanaLogin">
+        <form>
+            <h1>Log in</h1>
+            <div class="input-box">
+                <input type="username" name="username" [(ngModel)]="username" placeholder="Nombre de Usuario" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password"[(ngModel)]="password" placeholder="Contraseña" required> 
+            </div>
+            <div class="contra">
+                <a class="olvidastecontraseña" routerLink="/forgot-password">Olvidaste tu Contraseña?</a>
+            </div>
+            <!--<a class="" routerLink="/home">-->
+                <button (click)='callLogin()'>Ingresar</button>
+                {{myCredential.username}}
+            <!--</a>-->
+            <div class="registrarte-link">
+                <p>Don't have an account? <a routerLink="/newuser">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+    <link rel="stylesheet" href="login.component.css">
+  </div>
+</body>

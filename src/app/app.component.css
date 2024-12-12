@@ -25,11 +25,11 @@ section nav a {
  }
  
 section nav a:hover {
-    border: solid;
-    border-radius: 30px;
-    color: #ececec;
-    background: #0e0e0e;
-    border-color:  #0e0e0e;
+   border: solid;
+   border-radius: 30px;
+   color: #ececec;
+   background: #0e0e0e;
+   border-color:  #0e0e0e;
  }
 
 option:hover {
