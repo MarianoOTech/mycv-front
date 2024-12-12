@@ -82,6 +82,7 @@ button:hover{
     color: #ececec;
     background: #0e0e0e;
     border-color:  #0e0e0e;
+    cursor: pointer;
 }
 
 .registrarte-link{
