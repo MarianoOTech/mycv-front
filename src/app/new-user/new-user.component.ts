@@ -28,47 +28,39 @@ export class NewUserComponent {
 
  createUser() {
    console.log(this.myPayloadUser);
-
- this.userService.createUser(this.myPayloadUser)
-    .subscribe(({ data }) => {
+ 
+   this.userService.createUser(this.myPayloadUser).subscribe(
+     ({ data }) => {
        console.log('got data', data);
-
-       //alert(JSON.stringify(this.myUser));
-
+ 
        this.myCredential.username = this.myPayloadUser.username;
        this.myCredential.password = this.myPayloadUser.password;
-
-       this.userService.tokenAuth(this.myCredential)
-       .subscribe(({ data }) => {
-          console.log('logged: ', JSON.stringify(data));
-
-          this.storageService.setSession("user", this.myPayloadUser.username);
-          this.storageService.setSession("token", JSON.parse(JSON.stringify(data)).tokenAuth.token);
-         
-         alert("User created : " + JSON.stringify(data));
-
-         this.router.navigate(['/home']);
-
-       }, (error) => {
-          console.log('error logging user : ', error);
-          alert(error);
-          
-       });
-     
-
-
-
-    }, (error) => {
+ 
+       this.userService.tokenAuth(this.myCredential).subscribe(
+         ({ data }) => {
+           console.log('logged: ', JSON.stringify(data));
+ 
+           this.storageService.setSession("user", this.myPayloadUser.username);
+           this.storageService.setSession("token", JSON.parse(JSON.stringify(data)).tokenAuth.token);
+ 
+           alert("User created : " + JSON.stringify(data));
+ 
+           this.router.navigate(['/home']);
+         },
+         (error) => {
+           console.log('error logging user : ', error);
+           alert(error.message || 'Error logging in');
+         }
+       );
+     },
+     (error) => {
        console.log('error creating user : ', error);
-       this.myPayloadUser.username = "";
-       this.myPayloadUser.email = "";
-       this.myPayloadUser.password = "";
-       alert(error);
-    });
-  
-  
-
-
- } 
-
+       this.myPayloadUser.username = '';
+       this.myPayloadUser.email = '';
+       this.myPayloadUser.password = '';
+       alert(error.message || 'Error creating user');
+     }
+   );
+ }
+ 
 }
